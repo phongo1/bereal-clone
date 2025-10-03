@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "BeReal Clone",
+    "slug": "bereal-clone",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs access to camera to capture your BeReal moments.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to photo library to save your BeReal photos."
+      }
+    },
+    "android": {
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "notification": {
+        "vapidPublicKey": "BEl62iUYgUivxIkv69yViEuiBIa40HI0Q8y8gWn9j7SJfS7cMQuy6if0rHrI5f9vfH2dXz6Ut2IjmE4Ny-3M3M"
+      }
+    },
+    "plugins": [
+      "expo-notifications"
+    ]
+  }
+}
