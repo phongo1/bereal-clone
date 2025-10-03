@@ -203,17 +203,6 @@ The Expo CLI output will show a QR code if you want to connect an Expo Go client
    npm run expo:start
    ```
 
-### Testing
-
-The app includes basic error handling and validation. For production deployment, consider adding:
-
-- Comprehensive input validation
-- Rate limiting
-- Image compression and optimization
-- Database backups
-- HTTPS support
-- Environment-specific configurations
-
 ## Deployment
 
 ### Backend Deployment
