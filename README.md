@@ -43,19 +43,31 @@ A lightweight React Native mobile app that lets users capture and share one dual
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
-- npm or yarn
-- Expo CLI (`npm install -g expo-cli`)
-- iOS Simulator (for iOS development) or Android Studio (for Android development)
+- Node.js 18 or newer (Node 16 works but 18+ is recommended for Expo tooling)
+- npm (bundled with Node)
+- Optional: Expo CLI (`npm install -g expo-cli`) for extra commands
+- Optional: iOS Simulator (requires Xcode) or Android Studio/Emulators if you plan to test natively
 
-### Backend Setup
+### Quick Start (recommended)
+
+The repository includes a helper script that installs dependencies, prepares the database, and runs both the backend API and Expo web client in one go.
+
+```bash
+./run.sh
+```
+
+The first run may take a few minutes while `npm install` completes. Subsequent runs skip dependency installation unless you delete `node_modules`. Press `Ctrl+C` to stop both servers.
+
+The Expo CLI output will show a QR code if you want to connect an Expo Go client. This project currently targets Expo SDK 49, so you must use a matching Expo Go build (or run the Expo web build in your browser).
+
+### Manual Setup (if you prefer separate terminals)
 
 1. **Install dependencies**:
    ```bash
    npm install
    ```
 
-2. **Set up environment variables**:
+2. **Set up environment variables** (optional – defaults work out of the box):
    ```bash
    cp env.example .env
    ```
@@ -78,22 +90,17 @@ A lightweight React Native mobile app that lets users capture and share one dual
    ```
    The server will run on `http://localhost:3000`
 
-### Frontend Setup
-
-1. **Install Expo CLI** (if not already installed):
-   ```bash
-   npm install -g expo-cli
-   ```
-
-2. **Start the Expo development server**:
+5. **Start the Expo dev server** (new terminal):
    ```bash
    npm run expo:start
    ```
 
-3. **Run on device/simulator**:
-   - For iOS: `npm run expo:ios`
-   - For Android: `npm run expo:android`
-   - For web: `npm run expo:web`
+6. **Run on device/simulator**:
+   - Web (default): open the browser tab Expo launches or run `npm run expo:web`
+   - iOS simulator: `npm run expo:ios`
+   - Android emulator: `npm run expo:android`
+   
+   > **Note:** Using a physical device with Expo Go requires the Expo Go build that matches SDK 49. Newer App Store/Play Store versions (e.g., SDK 54) will refuse to load this project.
 
 ## API Endpoints
 
